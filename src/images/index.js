@@ -10,9 +10,20 @@ import shrimoyee from "./shrimoyee.jpg"
 import tamalika from "./tamalika.jpg"
 import tina from "./tinadutta.jpg"
 import bitlogo from "./bitlogo.png"
+import Mukhopadhyay from "./mukhopadhyay.jpg"
+import manna from "./manna.jpg"
+import rahul from "./rahul.jpg"
+import partha from "./partha.jpg"
+import salabh from "./salabh.jpg"
+import gopal from "./gopal.jpg"
+import mousami from "./mousami.jpg"
+import vimal from "./vimal.jpg"
+import qedslogo from "./qedslogo.png"
+
 
 
 export {
+    qedslogo,
     logo,
     logobg,
     building,
@@ -24,5 +35,13 @@ export {
     shrimoyee,
     tamalika,
     tina,
-    bitlogo
+    bitlogo,
+    Mukhopadhyay,
+    manna,
+    rahul,
+    partha,
+    salabh,
+    gopal,
+    mousami,
+    vimal,
 }

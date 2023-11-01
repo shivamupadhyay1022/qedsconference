@@ -2,69 +2,86 @@ import React from 'react'
 import "./hero.css"
 import Typewriter from "typewriter-effect";
 import { Button } from 'flowbite-react';
+import { Link } from 'react-router-dom';
+import Glowingbut from './Glowingbut.tsx'
 import { Card } from 'flowbite-react';
 import '../pages/About.css'
+import { bitlogo, qedslogo } from '../images';
 
 function Hero() {
     return (
         // <div className='banner h-screen w-full text-white text-center align-bottom '>Hero</div>
-        <div class="banner">
-            <div class="absolute mt-[calc(50vh-184px)] px-4 py-3  w-full">
-                <div class="text-white font-semibold ">
+        <div class="banner h-[130vh] md:h-[110vh] ">
+            <div className='flow-root w-full mt-4  z-500 ' >
+                <img src={bitlogo} className='h-32 float-left ml-4 ' >
+                </img>
+                <img src={qedslogo} className='h-48 float-right mr-4' >
+                </img>
+            </div>
+            <div class="absolute  md:mt-[calc(50vh-324px)]  w-full">
 
-                    <h1 className='text-box text-4xl ml-8'><Typewriter
-                        onInit={(typewriter) => {
-                            typewriter
-                                .typeString("Welcome to 1st Annual QEDS Conference 2k24")
-                                .pauseFor(2000)
-                                .deleteAll()
-                                .typeString("Welcome to 1st Annual QEDS Conference 2k24")
-                                .pauseFor(2000)
-                                .deleteAll()
-                                .typeString("Welcome to 1st Annual QEDS Conference 2k24")
-                                .pauseFor(2000)
-                                .deleteAll()
-                                .typeString("Welcome to 1st Annual QEDS Conference 2k24")
-                                .pauseFor(2000)
-                                .deleteAll()
-                                .typeString("Welcome to 1st Annual QEDS Conference 2k24")
-                                .start();
-                        }}
-                    /></h1>
-                    <h4 className='mt-8 w-1/2 ml-11'>
-                        Welcome everyone to our 1st Annual QEDS Conference 2K24, a milestone moment in our journey of knowledge and collaboration.
-                        May this conference be a catalyst for forging a new connections,sharing wisdom and driving process in our respective fields.
-                    </h4>
-                    <Button href='/register' className='w-16 mt-4 ml-11'>Register </Button>
+                <div class="text-white font-semibold ">
+                    <center>
+                        <h1 className='text-box text-5xl ml-8'>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                        .typeString("1st Annual QEDS Conference 2024")
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString("1st Annual QEDS Conference 2024")
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString("1st Annual QEDS Conference 2024")
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString("1st Annual QEDS Conference 2024")
+                                        .pauseFor(2000)
+                                        .deleteAll()
+                                        .typeString("1st Annual QEDS Conference 2024")
+                                        .start();
+                                }}
+                            />
+                        </h1>
+                        <h4 className='mt-4'>
+                            8, 9 AND 10 FEBRUARY, 2024
+                        </h4>
+                        <h3 className='mt-4'>
+                            ORGANIZED BY
+                        </h3>
+                        <hr className='w-24 bg-blue-400 text-blue-500 mb-4' style={{
+                            color: 'blue',
+                            height: 5
+                        }} />
+                        <p className='text-1xl'>
+                            CENTRE FOR QUANTITATIVE ECONOMICS AND DATA SCIENCE
+                        </p>
+                        <p className='text-1xl'>
+                            BIRLA INSTITUTE OF TECHNOLOGY, MESRA,RANCHI,JHARKHAND
+                        </p>
+                        <p className='text-1xl'>
+                            INDIA
+                        </p>
+                        <p className='text-2xl mt-4'>
+                            THEME
+                        </p>
+                        <h4 className='mt-4 text-2xl md:w-1/2 md:ml-11'>
+                            Data Driven Analytics in Contemporary Economics and Business Issues
+                        </h4>
+                        <p className='text-2xl mt-4'>
+                            Broad theme for invited lectures:
+
+                        </p>
+                        <h4 className='mt-4 text-2xl md:w-1/2 md:ml-11'>
+                            Frontiers of research and recent applications in Economics, Statistics and Data Science focussing on economic development and public policy
+                        </h4>
+                        <div className='mt-4 mb-4' >
+                            <Link to='/register'>
+                                <Glowingbut children="Submit your paper now" />
+                            </Link >
+                        </div>
+                    </center>
                 </div>
-                <Card
-                    className="footer overflow-x-scroll h-[186px] md:h-[280px] mr-4 ml-11 mt-4 md:mt-8"
-                    href="#"
-                >
-                    <h5 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        <p>
-                            About Conference
-                        </p>
-                    </h5>
-                    <p className="font-normal text-gray-700 dark:text-gray-400">
-                        <p>
-                        1st Annual QEDS Conference 2024 aims at bringing together researchers and specialists in data science, 
-                        economics, statistics, and other relevant disciplines. The rapid advancement of databases and technologies 
-                        with the development of improved methodologies have led to the use of data science in various fields including 
-                        economics. The applications in economics data have been growing exponentially and producing promising results. 
-                        The conference will consider different original articles focusing mainly on methodological, theoretical, and 
-                        applied research in various domains of economics and business. The objective of this conference is to provide 
-                        insight into the recent advancements of data analytics tools and techniques in emerging economic applications. 
-                        Our goal is to create a resource-rich environment through the active participation of key invited speakers from 
-                        different reputed institutions with their valuable talks. It will create an ideal platform for engaging in 
-                        meaningful conversation that will exchange data-driven ideas which will be beneficial for the advancement of 
-                        research activities. This will also promote possible collaborations in multidisciplinary areas of science among 
-                        the participants which will promote research and development activities. To summarise, the goal of this conference 
-                        is to cover a broad range of data topics and provide a great venue for exchanging solutions for data analytical 
-                        methods along with the proper conclusions drawn from the studies in quantitative economics.
-                        </p>
-                    </p>
-                </Card>
 
             </div>
 

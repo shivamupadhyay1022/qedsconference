@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.css"
 import { BiLogoGmail } from 'react-icons/bi'
-import { kusum, manish, mrinal, saheli, shrimoyee, tamalika, tina } from '../images'
+import { kusum, manish, mrinal, saheli, shrimoyee, tamalika, tina,manna, Mukhopadhyay } from '../images'
 import { Navbar, Footer, Button } from 'flowbite-react'
 import { logo, logobg } from '../images'
 import { BsFacebook, BsGithub, BsInstagram,  BsTwitter } from 'react-icons/bs';
@@ -15,7 +15,7 @@ function About() {
                     <img src={logobg} className="mr-3 h-6 sm:h-9 " alt="Flowbite React Logo" />
                     <div className='hidden md:flex'  >
                         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">1<sup>st</sup>ANNUAL QEDS </span>
-                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2K24</span>
+                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2024</span>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle />
@@ -28,25 +28,43 @@ function About() {
                     </Navbar.Link>
                     <Navbar.Link className='text-white'  href="/date">Important Dates</Navbar.Link>
                     <Navbar.Link className='text-white'  href="/aboutconf">About Conference</Navbar.Link >
-                    <Navbar.Link className='text-white' href="/about">Comittees</Navbar.Link>
+                    <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+
                 </Navbar.Collapse>
             </Navbar>
         <div class="Team-body">
                 
             <h1 class="Team-heading">OUR TEAM</h1>
             <div class="Team-row">
-                <div class="TeamCard-card">
-                    <div class="TeamCard-img-container"><img src={shrimoyee}
-                        alt="Dr. Shrimoyee Ganguly" /></div>
-                    <h3>Dr. Shrimoyee Ganguly</h3>
-                    <p>Convenor</p>
-                    <div class="TeamCard-icons">
-                        <a href="mailto:shrimoyee@bitmesra.ac.in">
-                            <BiLogoGmail /></a>
-                        <a href="https://www.linkedin.com/in/shrimoyee-ganguly-2ba402216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                            <BsLinkedin /></a>
+                    <div class="TeamCard-card">
+                        <div class="TeamCard-img-container"><img src={manna}
+                            alt="Dr. Indranil Manna" /></div>
+                        <h3>Dr. Indranil Manna</h3>
+                        <p>Patron</p>
+                        <div class="TeamCard-icons">
+                            <a href="mailto:imanna.kgp@gmail.com">
+                                <BiLogoGmail /></a>
+                            <a href="linkedin.com/in/indranil-manna-3851a01aap" target="_blank">
+                                <BsLinkedin /></a>
+                        </div>
                     </div>
+
                 </div>
+                <div class="Team-row">
+
+                    <div class="TeamCard-card">
+                        <div class="TeamCard-img-container"><img src={Mukhopadhyay}
+                            alt="Dr. Kunal Mukhopadhyay" /></div>
+                        <h3>Dr. Kunal Mukhopadhyay</h3>
+                        <p>Head of Department</p>
+                        <div class="TeamCard-icons">
+                            <a href="mailto:hoc.eds@bitmesra.ac.in">
+                                <BiLogoGmail /></a>
+                            <a href="" target="_blank">
+                                <BsLinkedin /></a>
+                        </div>
+                    </div>
                 <div class="TeamCard-card">
                     <div class="TeamCard-img-container"><img src={mrinal}
                         alt="Dr. Mrinal Jana" /></div>
@@ -135,7 +153,7 @@ function About() {
                                         About Conference
                                     </Footer.Link>
                                     <Footer.Link href="/about">
-                                        Comittees
+                                        Committees
                                     </Footer.Link>
                                 </Footer.LinkGroup>
                             </div>

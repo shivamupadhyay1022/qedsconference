@@ -1,51 +1,51 @@
-import React,  { useState } from "react";
+import React, { useState } from "react";
 import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { ref, set } from "firebase/database";
 import { Button, Label, TextInput, Checkbox, Card, FileInput } from "flowbite-react";
 import { HiMail } from 'react-icons/hi';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { logobg } from "../images";
 
 function Register() {
 
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [file,setFile] = useState("");
-    const [password, setPassword] = useState("");
-    const [mobile, setMobile] = useState("");
-    const [email, setEmail] = useState("");
-    const [grade, setGrade] = useState("");
-    const [exam, setexam] = useState("");
-  
-    const navigate = useNavigate();
-    const [error, setError] = useState("")
-    
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [file, setFile] = useState("");
+  const [password, setPassword] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [grade, setGrade] = useState("");
+  const [exam, setexam] = useState("");
 
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      function onRegister() {
-        createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            set(ref(db, "users/" + userCredential.user.uid), {
-              firstName: firstName,
-              lastName: lastName,
-              email: email,
-              file:file,
-              mob: mobile,
-              grade: grade,
-              exam: exam,
-            });
-          })
-          .catch((error) => setError(error));
-        console.log(error);
-  
-        navigate("/dashboard2");
-      }
-      onRegister();
-    };
+  const navigate = useNavigate();
+  const [error, setError] = useState("")
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    function register() {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          set(ref(db, "users/" + userCredential.user.uid), {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            file: file,
+            mob: mobile,
+            grade: grade,
+            exam: exam,
+          });
+        })
+        .catch((error) => setError(error));
+      console.log(error);
+
+      navigate("/dashboard2");
+    }
+    register();
+  };
 
   return (
     <div class=" md:flex">
@@ -53,7 +53,7 @@ function Register() {
         class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
         <div>
           <h1 class="text-white font-bold text-4xl font-sans">QEDS</h1>
-          <p class="text-white mt-1">First Annual QEDS Conference 2k24</p>
+          <p class="text-white mt-1">First Annual QEDS Conference 2024</p>
           <button type="submit" class="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2">Read More</button>
         </div>
         <div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
@@ -65,14 +65,16 @@ function Register() {
         <div className="flex items-center justify-center p-12">
 
           <div className="mx-auto w-full max-w-[550px]">
-          <img src={logobg} className="w-36 mb-8"/>
+            <img src={logobg} className="w-36 mb-8" />
+            <p className="mb-3 block text-base font-medium text-[#07074D] " >Name of the Presenter</p>
             <form className="signupForm" onSubmit={handleSubmit}>
-                
+
               <div className="-mx-3 flex flex-wrap">
-                
+
                 <div className="w-full px-3 sm:w-1/2">
-                    
-                                      <div className="mb-5">
+
+
+                  <div className="mb-5">
                     <label
                       htmlFor="name"
                       className="mb-3 block text-base font-medium text-[#07074D]"
@@ -124,6 +126,21 @@ function Register() {
                   type="email"
                 />
               </div>
+              <div className="mb-5">
+                <div className="mb-3 block text-base font-medium text-[#07074D]">
+                  <Label
+                    htmlFor="mobile"
+                    value="Contact No"
+                  />
+                </div>
+                <TextInput
+                  id="mobile"
+                  required
+                  placeholder="contact no"
+                  onChange={(e) => setMobile(e.target.value)}
+                  type="text"
+                />
+              </div>
 
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
@@ -144,12 +161,12 @@ function Register() {
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
                     htmlFor="number"
-                    value="Name of the Presenter"
+                    value="Author(s)"
                   />
                 </div>
                 <TextInput
                   id="email4"
-                  placeholder="Name of the Presenter"
+                  placeholder="Author(s)"
                   required
                   onChange={(e) => setGrade(e.target.value)}
                   type="text"
@@ -180,28 +197,14 @@ function Register() {
                 </div>
                 <TextInput
                   id="email4"
-                  placeholder="Abstract"
+                  placeholder="Abstract (Maximum 250 words)"
                   required
                   onChange={(e) => setGrade(e.target.value)}
                   type="text"
                 />
               </div>
 
-              <div className="mb-5">
-                <div className="mb-3 block text-base font-medium text-[#07074D]">
-                  <Label
-                    htmlFor="mobile"
-                    value="Mobile No"
-                  />
-                </div>
-                <TextInput
-                  id="mobile"
-                  required
-                  placeholder="mobile no"
-                  onChange={(e) => setMobile(e.target.value)}
-                  type="text"
-                />
-              </div>
+
 
               <div
                 className="max-w-md mb-5"
@@ -247,6 +250,13 @@ function Register() {
                   </Label>
                 </div>
               </div>
+              <div className="mb-8" >
+                <Link to='/guidelines'>
+                  <p className="text-blue-600 underline" >
+                    Guideline for Authors
+                  </p>
+                </Link >
+              </div>
 
               <div>
                 <button
@@ -264,4 +274,4 @@ function Register() {
   )
 }
 
-export default Register
+export default Register;

@@ -13,7 +13,7 @@ function Aboutconf() {
                     <img src={logobg} className="mr-3 h-6 sm:h-9 " alt="Flowbite React Logo" />
                     <div className='hidden md:flex'  >
                         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">1<sup>st</sup>ANNUAL QEDS </span>
-                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2K24</span>
+                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2024</span>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle />
@@ -26,7 +26,9 @@ function Aboutconf() {
                     </Navbar.Link>
                     <Navbar.Link className='text-white'  href="/date">Important Dates</Navbar.Link>
                     <Navbar.Link className='text-white' active href="/aboutconf">About Conference</Navbar.Link >
-                    <Navbar.Link className='text-white' href="/about">Comittees</Navbar.Link>
+                    <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+
                 </Navbar.Collapse>
             </Navbar>
             <div className='md:h-[60vh] align-center text-center mt-24 mb-8'>
@@ -61,7 +63,7 @@ function Aboutconf() {
                     </p>
                 </p>
                 <center>
-                    <Button href='/register' className='w-36 mt-4 ml-11' >Register Now</Button></center>
+                    <Button href='/Submit Your Paper' className='w-36 mt-4 ml-11' >Submit Your Paper </Button></center>
 
             </div>
             <Footer className='bg-blue-800 ' container>
@@ -89,7 +91,7 @@ function Aboutconf() {
                                         About Conference
                                     </Footer.Link>
                                     <Footer.Link href="/about">
-                                        Comittees
+                                        Committees
                                     </Footer.Link>
                                 </Footer.LinkGroup>
                             </div>

@@ -8,6 +8,7 @@ import Aboutconf from './pages/Aboutconf';
 import Important from './pages/Important';
 import Aboutus from './pages/Aboutus';
 import Register from './pages/Register';
+import Guidelines from './pages/Guidelines';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/aboutconf' element= {<Aboutconf/>}/>
         <Route exact path='/date' element= {<Important/>}/>
         <Route exact path='/register' element= {<Register/>}/>
+        <Route exact path='/guidelines' element= {<Guidelines/>}/>
 
     </Routes>
   </BrowserRouter>

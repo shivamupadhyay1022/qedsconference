@@ -5,6 +5,8 @@ import "./About.css"
 import { BsLinkedin, BsInstagram, BsTwitter } from 'react-icons/bs';
 import "./Home.css"
 import Hero from '../components/Hero'
+import Committeecomp from '../components/Committeecomp';
+import Aboutconfcomp from '../components/Aboutconfcomp';
 
 function Home() {
   return (
@@ -14,7 +16,7 @@ function Home() {
                     <img src={logobg} className="mr-3 h-6 sm:h-9 " alt="Flowbite React Logo" />
                     <div className='hidden md:flex'  >
                         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">1<sup>st</sup>ANNUAL QEDS </span>
-                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2K24</span>
+                        <span className='self-center whitespace-nowrap text-xl font-semibold dark:text-white text-amber-500'> CONFERENCE 2024</span>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle />
@@ -27,10 +29,15 @@ function Home() {
                     </Navbar.Link>
                     <Navbar.Link className='text-white'  href="/date">Important Dates</Navbar.Link>
                     <Navbar.Link className='text-white'  href="/aboutconf">About Conference</Navbar.Link >
-                    <Navbar.Link className='text-white' href="/about">Comittees</Navbar.Link>
+                    <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+
                 </Navbar.Collapse>
             </Navbar>
     <Hero/>
+    <Aboutconfcomp/>
+    <Committeecomp/>
+    
     <Footer className='bg-blue-800 ' container>
                 <div className="w-full">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
@@ -56,7 +63,7 @@ function Home() {
                                         About Conference
                                     </Footer.Link>
                                     <Footer.Link href="/about">
-                                        Comittees
+                                        Committees
                                     </Footer.Link>
                                 </Footer.LinkGroup>
                             </div>

@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+  }
+
+  .buttonglowing {
+    border: 1px transparent;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+  }
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #25a5be;
+      -webkit-box-shadow: 0 0 3px #25a5be;
+    }
+    50% {
+      background-color: #25a5be;
+      -webkit-box-shadow: 0 0 15px #2596be;
+    }
+    100% {
+      background-color: #25a5be;
+      -webkit-box-shadow: 0 0 3px #25a5be;
+    }
+  }
+  @keyframes glowing {
+    0% {
+      background-color: #25a5be;
+      box-shadow: 0 0 3px #25a5be;
+    }
+    50% {
+      background-color: #2596be;
+      box-shadow: 0 0 15px #2596be;
+    }
+    100% {
+      background-color: #25a5be;
+      box-shadow: 0 0 3px #25a5be;
+    }
+  }
+  .svg-btn {
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin-left: 10px;
+  }
+  svg {
+    fill: blue;
+    -webkit-animation: glowing-polygon 1300ms infinite;
+    -moz-animation: glowing-polygon 1300ms infinite;
+    -o-animation: glowing-polygon 1300ms infinite;
+    animation: glowing-polygon 1300ms infinite;
+  }
+  @-webkit-keyframes glowing-polygon {
+    0% {
+      fill: #25a5be;
+      -webkit-filter: drop-shadow( 0 0 3px #25a5be);
+    }
+    50% {
+      fill: #2596be;
+      -webkit-filter: drop-shadow( 0 0 15px #2596be);
+    }
+    100% {
+      fill: #25a5be;
+      -webkit-filter: drop-shadow( 0 0 3px #25a5be);
+    }
+  }
+  @keyframes glowingPolygon {
+    0% {
+      fill: #25a5be;
+      filter: drop-shadow( 0 0 3px #25a5be);
+    }
+    50% {
+      fill: #2596be;
+      filter: drop-shadow( 0 0 15px #2596be);
+    }
+    100% {
+      fill: #25a5be;
+      filter: drop-shadow( 0 0 3px #25a5be);
+    }
+  }
