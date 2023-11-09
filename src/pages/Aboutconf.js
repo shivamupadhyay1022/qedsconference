@@ -28,6 +28,8 @@ function Aboutconf() {
                     <Navbar.Link className='text-white' active href="/aboutconf">About Conference</Navbar.Link >
                     <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
                     <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/schedule">Schedule</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/contactus">Contact Us</Navbar.Link>
 
                 </Navbar.Collapse>
             </Navbar>
@@ -63,7 +65,7 @@ function Aboutconf() {
                     </p>
                 </p>
                 <center>
-                    <Button href='/Submit Your Paper' className='w-36 mt-4 ml-11' >Submit Your Paper </Button></center>
+                    <Button href='/register' className='w-36 mt-4 ml-11' >Submit Your Paper </Button></center>
 
             </div>
             <Footer className='bg-blue-800 ' container>

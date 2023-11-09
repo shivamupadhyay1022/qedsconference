@@ -29,6 +29,8 @@ function Aboutus() {
           <Navbar.Link className='text-white' href="/aboutconf">About Conference</Navbar.Link >
           <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
           <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/schedule">Schedule</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/contactus">Contact Us</Navbar.Link>
 
         </Navbar.Collapse>
       </Navbar>
@@ -47,14 +49,14 @@ function Aboutus() {
 
         <p className="font-normal text-white dark:text-gray-400 px-8 mt-10">
           <p>
-            The CENTRE FOR Quantitative Economics and Data Science was established in the year 2021 with the aim to provide fundamental knowledge and problem-solving skills in the area of Quantitative Economics and Data Sciences. This will help in disseminating the acquired knowledge towards improving analytical skills, research and practical application.
+            The Centre For Quantitative Economics and Data Science was established in the year 2021 with the aim to provide fundamental knowledge and problem-solving skills in the area of Quantitative Economics and Data Sciences. This will help in disseminating the acquired knowledge towards improving analytical skills, research and practical application.
             The Centre is recognized at par with existing leading Centers in terms of available computational facilities and academic & research infrastructure. The Centre remains committed to its two-fold mission.
 
-            Centre’s Vision
+            <center>Centre’s Vision</center>
 
             To become a globally recognized CENTRE FOR excellence in teaching and research by producing academicians, professionals, and innovators to create a better world where a profound understanding of the field of Quantitative Economics and Data Sciences drives positive change in business and society.
             <br />
-            Centre’s Mission
+           <center>Centre’s Mission</center> 
 
             •    To set-up a world-class Quantitative Economics and Data Science centre by producing original & robust research insights, delivering high-quality & evidence-based education and engaging with people & organisations worldwide, across the private & public sectors, who are motivated to transform the world by tackling real world challenges.
             •    To intellectually transform students for productive and stimulating careers by providing them a strong grasp of fundamentals through a diverse living environment, exposure to new ideas and interaction with people who come from different walks of life and have evolving identities.

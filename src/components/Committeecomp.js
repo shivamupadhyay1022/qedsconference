@@ -14,6 +14,14 @@ function Committeecomp() {
             <div class="Team-body">
 
             <h3 className='text-3xl text-blue-400  w-full text-center mb-4 ' >Organizing Committee</h3>
+            <center><hr
+            className="w-64 bg-blue-400 text-blue-500 mb-4"
+            style={{
+              color: "white",
+              height: 5,
+            }}
+          /></center>
+            
                 <div class="Team-row">
                     <div class="TeamCard-card">
                         <div class="TeamCard-img-container"><img src={manna}

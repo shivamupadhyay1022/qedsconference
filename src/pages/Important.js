@@ -29,6 +29,8 @@ function Important() {
                     <Navbar.Link className='text-white' href="/aboutconf">About Conference</Navbar.Link >
                     <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
                           <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/schedule">Schedule</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/contactus">Contact Us</Navbar.Link>
 
                 </Navbar.Collapse>
             </Navbar>
@@ -46,40 +48,16 @@ function Important() {
                 </center>
                 <center>
 
-                <table class="table-auto w-3/4 shadow-md mt-5 rounded  border-separate border-spacing-y-3 md:w-1/2 ">
-                    <thead className='text-left tracking-wider' >
-                        <tr>
-                            <th>Day</th>
-                            <th>Date</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody className='text-left tracking-wider' >
-                        <tr>
-                            <td>First Day</td>
-                            <td>9th February 2024</td>
-                            <td>BIT Mesra</td>
-                        </tr>
-                        <tr>
-                        <td>Second Day</td>
-                            <td>10th February 2024</td>
-                            <td>BIT Mesra</td>
-                        </tr>
-                        <tr>
-                        <td>Third Day</td>
-                            <td>11th February 2024</td>
-                            <td>BIT Mesra</td>
-                        </tr>
-                        <tr>
-                        <td>Last Submission Date</td>
-                            <td>10th December 2023</td>
-                            <td>BIT Mesra</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className='text-2xl'>
+              <p>Last Date of Paper Submission : December 10, 2023</p>
+              <p>Date of Acceptance Notification : January 10, 2024</p>
+              <p>Dates for Registration : January 11-20, 2024</p>
+              <p>Registration Link : To be updated</p>
+
+            </div>
                 </center>
                 <center>
-                    <Button href='/Submit Your Paper' className='w-36 mt-4 ml-11' >Submit Your Paper </Button></center>
+                    <Button href='/register' className='w-36 mt-4 ml-11' >Submit Your Paper </Button></center>
 
             </div>
             <Footer className='bg-blue-800 ' container>

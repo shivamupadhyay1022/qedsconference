@@ -30,6 +30,8 @@ function About() {
                     <Navbar.Link className='text-white'  href="/aboutconf">About Conference</Navbar.Link >
                     <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
                     <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/schedule">Schedule</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/contactus">Contact Us</Navbar.Link>
 
                 </Navbar.Collapse>
             </Navbar>
@@ -57,7 +59,7 @@ function About() {
                         <div class="TeamCard-img-container"><img src={Mukhopadhyay}
                             alt="Dr. Kunal Mukhopadhyay" /></div>
                         <h3>Dr. Kunal Mukhopadhyay</h3>
-                        <p>Head of Department</p>
+                        <p>Head of Centre</p>
                         <div class="TeamCard-icons">
                             <a href="mailto:hoc.eds@bitmesra.ac.in">
                                 <BiLogoGmail /></a>

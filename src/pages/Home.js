@@ -31,6 +31,8 @@ function Home() {
                     <Navbar.Link className='text-white'  href="/aboutconf">About Conference</Navbar.Link >
                     <Navbar.Link className='text-white' href="/about">Committees</Navbar.Link>
                     <Navbar.Link className='text-white'  href="/guidelines">Guidelines</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/schedule">Schedule</Navbar.Link>
+                    <Navbar.Link className='text-white'  href="/contactus">Contact Us</Navbar.Link>
 
                 </Navbar.Collapse>
             </Navbar>
@@ -77,6 +79,11 @@ function Home() {
                             href="#"
                             year={2023}
                         />
+                        <div>
+                            <p>
+                                v1.3.2
+                            </p>
+                        </div>
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center text-white">
                             <Footer.Icon className='text-white'
                                 href="https://www.linkedin.com/school/b.i.t.-mesra-ranchi/?originalSubdomain=in"

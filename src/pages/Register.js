@@ -22,31 +22,45 @@ function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState("")
 
+  
 
+  const [submit, setSubmit] = useState(false);
+  const [formData, setFormData] = useState({
+    "entry.752130688": "",
+    "entry.1939908270": "",
+    "entry.84347739": "",
+    "entry.44790295": "",
+    "entry.2036977325": "",
+    "entry.773319340": "",
+    "entry.2088734036": "",
+    "entry.1940062922": "",
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    function register() {
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          set(ref(db, "users/" + userCredential.user.uid), {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            file: file,
-            mob: mobile,
-            grade: grade,
-            exam: exam,
-          });
-        })
-        .catch((error) => setError(error));
-      console.log(error);
+  const handleInputData = (input) => (e) => {
+    const { value } = e.target;
 
-      navigate("/dashboard2");
-    }
-    register();
+    setFormData((prevState) => ({
+      ...prevState,
+      [input]: value
+    }));
   };
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSubmit(true);
+
+    let url ='https://docs.google.com/forms/u/0/d/e/1FAIpQLSe2ZI2j2zfMMCmTrjMlVj1-R9monyqdUcmqs_2TpMzHBgDSCw/formResponse?entry.752130688=${formData["entry.752130688"]}&entry.1939908270=${formData["entry.1939908270"]}&entry.84347739=${formData["entry.84347739"]}&entry.44790295=${formData["entry.44790295"]}&entry.2036977325=${formData["entry.2036977325"]}&entry.773319340=${formData["entry.773319340"]}&entry.2088734036=${formData["entry.2088734036"]}&entry.1940062922=${formData["entry.1940062922"]}'
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+    navigate('/about')
+  }
+//https://docs.google.com/forms/u/0/d/e/1FAIpQLSe2ZI2j2zfMMCmTrjMlVj1-R9monyqdUcmqs_2TpMzHBgDSCw/formResponse
+
+//https://docs.google.com/forms/d/e/1FAIpQLSe2ZI2j2zfMMCmTrjMlVj1-R9monyqdUcmqs_2TpMzHBgDSCw/viewform?usp=pp_url
   return (
     <div class=" md:flex">
       <div
@@ -67,7 +81,7 @@ function Register() {
           <div className="mx-auto w-full max-w-[550px]">
             <img src={logobg} className="w-36 mb-8" />
             <p className="mb-3 block text-base font-medium text-[#07074D] " >Name of the Presenter</p>
-            <form className="signupForm" onSubmit={handleSubmit}>
+            <form className="signupForm" onSubmit={handleSubmit} target="_self">
 
               <div className="-mx-3 flex flex-wrap">
 
@@ -76,16 +90,17 @@ function Register() {
 
                   <div className="mb-5">
                     <label
-                      htmlFor="name"
+                      htmlFor="entry.752130688"
                       className="mb-3 block text-base font-medium text-[#07074D]"
                     >
                       First Name
                     </label>
                     <input
                       type="text"
-                      name="name"
+                      name="entry.752130688"
                       placeholder="First Name"
-                      onChange={(e) => setFirstName(e.target.value)}
+                      value={formData["entry.752130688"]}
+                      onChange={handleInputData("entry.2037917220")}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     />
                   </div>
@@ -94,16 +109,17 @@ function Register() {
                 <div className="w-full px-3 sm:w-1/2">
                   <div className="mb-5">
                     <label
-                      htmlFor="lastname"
+                      htmlFor="entry.1939908270"
                       className="mb-3 block text-base font-medium text-[#07074D]"
                     >
                       Last Name
                     </label>
                     <input
                       type="text"
-                      name="lastname"
+                      name="entry.1939908270"
                       placeholder="Last Name"
-                      onChange={(e) => setLastName(e.target.value)}
+                      value={formData["entry.1939908270"]}
+                      onChange={handleInputData("entry.1939908270")}
                       className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     />
                   </div>
@@ -113,7 +129,7 @@ function Register() {
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="email4"
+                    htmlFor="entry.84347739"
                     value="Your email"
                   />
                 </div>
@@ -121,7 +137,8 @@ function Register() {
                   id="email4"
                   placeholder="name@email.com"
                   required
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData["entry.84347739"]}
+                      onChange={handleInputData("entry.84347739")}
                   rightIcon={HiMail}
                   type="email"
                 />
@@ -129,7 +146,7 @@ function Register() {
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="mobile"
+                    htmlFor="entry.44790295"
                     value="Contact No"
                   />
                 </div>
@@ -137,7 +154,8 @@ function Register() {
                   id="mobile"
                   required
                   placeholder="contact no"
-                  onChange={(e) => setMobile(e.target.value)}
+                  value={formData["entry.44790295"]}
+                      onChange={handleInputData("entry.44790295")}
                   type="text"
                 />
               </div>
@@ -145,7 +163,7 @@ function Register() {
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="number"
+                    htmlFor="entry.2036977325"
                     value="Affliation"
                   />
                 </div>
@@ -153,14 +171,15 @@ function Register() {
                   id="email4"
                   placeholder="Affliation"
                   required
-                  onChange={(e) => setGrade(e.target.value)}
+                  value={formData["entry.2036977325"]}
+                      onChange={handleInputData("entry.2036977325")}
                   type="text"
                 />
               </div>
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="number"
+                    htmlFor="entry.773319340"
                     value="Author(s)"
                   />
                 </div>
@@ -168,14 +187,15 @@ function Register() {
                   id="email4"
                   placeholder="Author(s)"
                   required
-                  onChange={(e) => setGrade(e.target.value)}
+                  value={formData["entry.773319340"]}
+                      onChange={handleInputData("entry.773319340")}
                   type="text"
                 />
               </div>
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="number"
+                    htmlFor="entry.2088734036"
                     value="Title of the Paper"
                   />
                 </div>
@@ -183,7 +203,8 @@ function Register() {
                   id="email4"
                   placeholder="Title of the Paper"
                   required
-                  onChange={(e) => setGrade(e.target.value)}
+                  value={formData["entry.2088734036"]}
+                      onChange={handleInputData("entry.2088734036")}
                   type="text"
                 />
               </div>
@@ -191,7 +212,7 @@ function Register() {
               <div className="mb-5">
                 <div className="mb-3 block text-base font-medium text-[#07074D]">
                   <Label
-                    htmlFor="number"
+                    htmlFor="entry.1940062922"
                     value="Abstract"
                   />
                 </div>
@@ -199,7 +220,8 @@ function Register() {
                   id="email4"
                   placeholder="Abstract (Maximum 250 words)"
                   required
-                  onChange={(e) => setGrade(e.target.value)}
+                  value={formData["entry.1940062922"]}
+                      onChange={handleInputData("entry.1940062922")}
                   type="text"
                 />
               </div>
@@ -260,6 +282,7 @@ function Register() {
 
               <div>
                 <button
+                type="submit"
                   className={`w-full hover:shadow-htmlForm rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none`}
                 >
                   Submit

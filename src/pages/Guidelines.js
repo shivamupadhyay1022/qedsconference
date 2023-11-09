@@ -32,45 +32,24 @@ function Guidelines() {
   </Navbar>
   <div className='md:h-[60vh] align-center text-center mt-24 mb-32'>
     <center className='  '>
-      <div className='flex align-middle justify-center'>
+    <p className="text-white text-4xl block mt-4 ">Author Guidelines</p>
+          
+    <hr
+            className="w-64 bg-blue-400 text-blue-500 mb-4"
+            style={{
+              color: "white",
+              height: 5,
+            }}
+          />
 
 
-        <h5 className="text-3xl font-bold text-white dark:text-white mt-8">
-          <p>
-            Authors Guidelines
+          <p className="w-3/4 text-2xl mb-8 ">
+          Preparation of Paper: Your Contribution may be prepared in LaTeX or Ms-Word and submitted in pdf format only.
+          Manuscripts should be formatted in Times New Roman with Font Size 12 and 1.5 line spacing
           </p>
-        </h5>
-      </div>
-    </center>
-    <center>
+          
+      </center>
 
-    <table class="table-auto ml-2 w-full shadow-md mt-5 rounded  border-separate border-spacing-y-3 md:w-1/2 ">
-                    <thead className='text-left tracking-wider' >
-                        <tr>
-                            <th>Heading level</th>
-                            <th>Font size and style</th>
-                        </tr>
-                    </thead>
-                    <tbody className='text-left tracking-wider' >
-                        <tr>
-                            <td>Title (centered)</td>
-                            <td>14 point, bold, Times New Roman </td>
-                        </tr>
-                        <tr>
-                        <td>Abstract Lecture Notes</td>
-                            <td>10 point 250 words, Times New Roman</td>
-                        </tr>
-                        <tr>
-                        <td>Section name</td>
-                            <td>12 point, Times New Roman</td>
-                        </tr>
-                        <tr>
-                        <td>Paper body</td>
-                            <td>11 point, Times New Roman</td>
-                        </tr>
-                    </tbody>
-                </table>
-                </center>
 
   </div>
   <Footer className='bg-blue-800 ' container>
